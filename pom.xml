@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>MYAPP</name>
-	      <url>http://20.115.165.225:8081/repository/myapp-release/</url>
+	      <url>http://52.140.116.153:8081/repository/myapp_release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>MYAPP</name>
-	      <url>http://20.115.165.225:8081/repository/myapp-snapshot/</url>
+	      <url>http://52.140.116.153:8081/repository/myapp_snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
