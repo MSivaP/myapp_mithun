@@ -1,0 +1,21 @@
+node
+{
+def mavenHome = tool name: "maven-3.9.16"
+stage ('checkout')
+{
+git branch: 'dev', credentialsId: '77c9bebf-abd6-465c-afee-c20787c3eb91', url: 'https://github.com/MSivaP/myapp_mithun.git'
+}
+stage ('build')
+{
+sh "${mavenHome}/bin/mvn clean package"
+}
+/*
+stage ('deployappintoTomcatserver')
+{
+sshagent(['ubuntu'])
+{
+sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ubuntu@13.239.40.47:/opt/tomcat/webapps" ## target/warfile name we should give 
+}
+}
+*/
+}
