@@ -1,0 +1,42 @@
+pipeline
+{
+    agent any
+    tools 
+    {
+        maven "maven-3.9.16"
+    }
+options {
+  timestamps
+}
+{
+  buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '2')
+}
+
+    stages
+    {
+        stage ('Source Code')
+        {
+            steps
+            {
+git branch: 'dev', credentialsId: 'c1efdc61-daf0-444d-9cd3-81e624748278', url: 'https://github.com/MSivaP/myapp_mithun.git'
+}
+        }
+        stage ('Build the Code')
+        {
+            steps
+            {
+                sh "mvn clean package"
+            }
+        }
+        stage ('Deploy Into Tomcat')
+        {
+            steps
+            {
+     sshagent(['85d0a069-dc52-422b-aea1-9c77f6cc4aaa']) {
+ sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@13.211.41.167:/opt/tomcat/webapps"
+
+            }
+        }
+    }
+}
+}
