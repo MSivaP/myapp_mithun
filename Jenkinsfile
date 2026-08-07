@@ -6,10 +6,7 @@ pipeline
             maven "maven-3.9.16"
         }
         triggers
-        {
-            cron "* * * * *"
-        }
-    stages
+            stages
     {
         stage('GitSourceCode')
         {
