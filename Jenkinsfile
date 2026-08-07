@@ -5,7 +5,6 @@ pipeline
         {
             maven "maven-3.9.16"
         }
-        triggers
             stages
     {
         stage('GitSourceCode')
