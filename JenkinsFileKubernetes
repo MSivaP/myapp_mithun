@@ -18,7 +18,7 @@ pipeline
         {
             steps()
             {
-                git branch: 'master', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+                git branch: 'master', url: 'https://github.com/SivaTechnologiesDevOps/maven-web-application.git'
             }
         }
 
