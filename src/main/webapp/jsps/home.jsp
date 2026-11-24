@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Siva Technologies</h1>
-<h1 align="center">Phone Number: +91 9980923216</h1>
+<h1 align="center">Phone Number: +91 9988776655</h1>
 <h1 align="center">Siva Technologies is a Very Good Training Center for Learning AWS DevOps, Jenkins, Docker, Kubernetes, GitOps, ArgoCD, Terraform and Amazon Web Services</h1>
 
 <h1 align="center">Trainer Name: Bhaskar Reddy Lacchannagari</h1>
@@ -41,7 +41,7 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 		Siva Technologies, 
 		Marathahalli,
 		Bengaluru,
-		+91 9980923216 and 
+		+91 9988776655 and 
 		Devopstrainingblr@Gmail.com
 		<br>
 		<a href="mailto:Devopstrainingblr@Gmail.com">Mail to Siva Technologies</a>
